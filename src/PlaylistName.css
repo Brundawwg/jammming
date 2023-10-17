@@ -1,0 +1,9 @@
+.nameButton {
+    background-color: black;
+    color: white;
+}
+
+.NameList {
+    display: flex;
+    flex-direction: column;
+}

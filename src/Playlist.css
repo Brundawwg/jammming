@@ -1,0 +1,51 @@
+.playlist {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgba(0,0, 255, .40);
+    box-sizing: border-box;
+    
+   
+}
+
+.playlistContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: thin black solid;
+    position: relative;
+    background-color: rgba(0,0, 255, .40);
+    box-sizing: border-box;
+    height: 40vh;
+    width: 30vw;
+    overflow: scroll;
+    max-height: 40vh;
+   
+}
+
+.playlistContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.playlistHeader {
+    border-bottom: thin black solid;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.playlistName {
+    display: flex;
+    flex-direction: column;
+}
+
+.addedTracks {
+    display: flex;
+    justify-content: space-between;
+    border-top: thin red solid;
+    border-bottom: thin red solid;
+}
+
+.trashButton {
+    color: whitesmoke;
+}

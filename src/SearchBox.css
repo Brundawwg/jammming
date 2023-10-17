@@ -1,0 +1,27 @@
+.search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-color: rgba(0, 0, 200, .80);
+    color: white;
+}
+
+.searchButton {
+    color: white;
+    background-color: rgba(0, 0, 200, .80);
+    margin-top: 10px;
+    border-radius: 15%;
+}
+
+::placeholder {
+    color: black;
+    
+}
