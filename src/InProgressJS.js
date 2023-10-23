@@ -1,13 +1,3 @@
-const tracks = () => {
-    const [tracks, setTracks] = useState([
-      {
-        id: 1
-        artist: '',
-        name: '' ,
-        album: '',  
-      }
-    ])
-  }; 
 
   {albums.map( (album, i) => {
     return (
@@ -30,6 +20,16 @@ const tracks = () => {
 </ul>
 
 const handleDelete = (album.id) => {
-    const albums = albums.filter((album) => album.id !== id);
+    const deletedList = albums.filter((album) => album.id !== id);
     setAlbums(albums);
-}
+};
+
+{playlistTracks.map( (track, i) => {
+  return (
+    <li key={track.id} className='track'>
+      <img src={track.images[0].url} />
+     "{track.name}"
+      <FaPlus role='button' tabIndex='0' className='addButton'  />
+    </li>
+  )
+})}

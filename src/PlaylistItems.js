@@ -2,28 +2,34 @@ import React from 'react'
 import { FaTrashAlt } from 'react-icons/fa';
 
 
+
 const PlaylistItems = ({albums, playlistTracks, setPlaylistTracks, setAlbums}) => {
-
+  
   const handleDelete = (id) => {
-    const newAlbums = albums.filter((album) => album.id !== id);
-    setAlbums(newAlbums);
-    console.log(newAlbums)
-}
+    var updatedList = playlistTracks.filter((track) => track.id !== id);
+    setPlaylistTracks(updatedList);
+};
 
-  return (
-    <>
-         {albums.map( (album, i) => {
-          return (
-            <li key={album.id} className='track'>
-              <img src={album.images[0].url} />
-              <> "{album.name}" </>
-              <FaTrashAlt role='button' tabIndex='0' className='addButton' onClick={handleDelete} />
-            </li>
-          )
-        })}
-       
+  const putAlbumBack = (id) => {
+    var updatedAlbums = albums.push(id);
+    setAlbums(updatedAlbums);
+  } 
+
+
+    return (
+      <>
+    {playlistTracks.map( (track, i) => {
+      return (
+        <li key={track.id} className='track'>
+          <img src={track.images[0].url} />
+         "{track.name}"
+          <FaTrashAlt role='button' tabIndex='0' className='addButton' onClick={() => {setAlbums([...albums, track]); handleDelete(track.id); }} />
+        </li>
+      )
+    })}
     </>
   )
+    
 }
 
 export default PlaylistItems

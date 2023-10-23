@@ -2,6 +2,7 @@ import React from 'react'
 import './Playlist.css';
 import PlaylistName from './PlaylistName';
 import PlaylistItems from './PlaylistItems';
+import { FaPlus } from 'react-icons/fa'
 
 
 
@@ -12,11 +13,10 @@ const Playlist = ({ albums, setAlbums, handleDelete, handleSubmit, playlistTrack
       <div className="playlistHeader">Playlist</div>
       <div className="playlist">
         <PlaylistItems 
-          albums={albums}
-          setAlbums={setAlbums}
-          handleDelete={handleDelete}          
           playlistTracks={playlistTracks}
           setPlaylistTracks={setPlaylistTracks}
+          albums={albums}
+          setAlbums={setAlbums}
         />
       </div>
       <div>
